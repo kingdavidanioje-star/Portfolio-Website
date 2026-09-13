@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King David's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://googleapis.com');
+        * { font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .glass { backdrop-filter: blur(10px); background: rgba(15, 23, 42, 0.6); }
+        .gradient-text { background: linear-gradient(90deg, #38BDF8, #A855F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-950 text-white">
+    <!--nav-->
+    <nav class="fixed w-full glass z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">King David.dev</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-[#38bdf8]">About</a>
+                <a href="#skills" class="hover:text-[#38bdf8]">Skills</a>
+                <a href="#projects" class="hover:text-[#38bdf8]">Projects</a>
+                <a href="#contact" class="hover:text-[#38bdf8]">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <!--HERO-->
+    <section class="min-h-screen flex items-center px-6 pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#38bdf8]/20 to-[#A855f7]/20 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+            <div>
+                <p class="text-[#38BDF8] mb-4">Hello, I'm</p>
+                <h2 class="text-5xl md:text-7xl font-bold leading-tight">King <span class="gradient-text">David</span></h2>
+                <h3 class="text-2xl md:text-3xl mt-4 text-gray-300">I build <span class="gradient-text">modern websites</span></h3>
+                <p class="mt-6 text-gray-400 max-w-lg">Web developer based in Bayelsa, Nigeria. I turn ideas into fast, beautiful, and responsive web experiences.</p>
+                <div class="mt-8 flex gap-4">
+                    <a href="#projects" class="bg-gradient-to-r from-[#38bdf8] to-[#A855f7] px-8 py-3 rounded-lg font-semibold hover:scale-105 transition">View Projects</a>
+                    <a href="#contact" class="border border-[#38BDF8] px-8 py-3 rounded-lg font-semibold hover:bg-[#38BDF8]/10 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="flex justify-center float">
+                <div class="w-100 h-100 rounded-full border-4 border-[#38BDF8] shadow-2xl shadow-[#38BDF8]/30 flex items-center justify-center bg-slate-800 text-6xl font-bold gradient-text"><img src="C:\Users\HP\Pictures\1771082634996.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--About-->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-6">About <span class="gradient-text">Me</span></h3>
+            <p class="text-gray-300 leading-relaxed text-lg">I'm a passionate Web Developer with experience in building responsive and user-friendly websites. I specialize in modern JavaScript frameworks and clean UI/UX design. My goal is help businesses in Nigeria and beyond establish a strong online presence with websites that convert visitors into customers.</p>
+            <div class="mt-8 grid grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-xl"><p class="text-3xl font-bold gradient-text">5+</p><p class="text-gray-400">Projects</p></div>
+                <div class="glass p-6 rounded-xl"><p class="text-3xl font-bold gradient-text">3 months+</p><p class="text-gray-400">Months of Coding</p></div>
+                <div class="glass p-6 rounded-xl"><p class="text-3xl font-bold gradient-text">50%</p><p class="text-gray-400">Dedication</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Skills-->
+    <section id="skills" class="py-20 px-6 bg-[#1E293B]">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12">My <span class="gradient-text">Skills</span></h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-xl card-hover"><i data-lucide="code" class="text-[#38BDF8] mb-3"></i><h4 class="font-bold">HTML5 & CSS3</h4></div>
+                <div class="glass p-6 rounded-xl card-hover"><i data-lucide="file-code" class="text-[#38BDF8] mb-3"></i><h4 class="font-bold">JavaScript</h4></div>
+                <div class="glass p-6 rounded-xl card-hover"><i data-lucide="git-branch" class="text-[#38BDF8] mb-3"></i><h4 class="font-bold">Git & GitHub</h4></div>
+                <div class="glass p-6 rounded-xl card-hover"><i data-lucide="smartphone" class="text-[#38BDF8] mb-3"></i><h4 class="font-bold">Responsive Design</h4></div>
+                <div class="glass p-6 rounded-xl card-hover"><i data-lucide="zap" class="text-[#38BDF8] mb-3"></i><h4 class="font-bold">Performance</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Project-->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12">Featured <span class="gradient-text">Projects</span></h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="glass rounded-2xl overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/600x400" alt="My first blog" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">My first blog</h4>
+                        <p class="text-gray-400 mb-4">A simple personal blog and layout built with responsive components.</p>
+                        <div class="flex gap-4">
+                            <a href="C:\Users\HP\Pictures\Saved Pictures\My first blog.html" class="text-[#38BDF8] flex items-center gap-1"><i data-lucide="external-link" class="w-4 h-4"></i>Live</a>
+                            <a href="#" class="text-[#A855f7] flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/600x400" alt="Portfolio preview" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">JS counter</h4>
+                        <p class="text-gray-400 mb-4">My first JavaScript project used for counting.</p>
+                        <div class="flex gap-4">
+                            <a href="C:\Users\HP\Pictures\js counter.html" class="text-[#38BDF8] flex items-center gap-1"><i data-lucide="external-link" class="w-4 h-4"></i>Live</a>
+                            <a href="#" class="text-[#A855f7] flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact-->
+    <section id="contact" class="py-20 px-6 bg-[#1E293B]">
+        <div class="max-w-2xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-6">Let's <span class="gradient-text">Connect</span></h3>
+            <p class="text-gray-300 mb-8">Have a project? I'm always open to discussing new opportunities.</p>
+            <div class="glass p-8 rounded-2xl space-y-4">
+                <a href="mailto:kingdavidanioje@gmail.com" class="flex items-center justify-center gap-3 hover:text-[#38BDF8]"><i data-lucide="mail"></i>kingdavidanioje@gmail.com</a>
+                <a href="https://wa.me/08103819666" class="flex items-center justify-center gap-3 hover:text-[#38BDF8]"><i data-lucide="message-circle"></i>Whatsapp</a>
+                <a href="https://github.com/kingdavidanioje-star" class="flex items-center justify-center gap-3 hover:text-[#38BDF8]"><i data-lucide="github"></i>GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center text-gray-500 border-t border-white/10">
+        2026 King David. Crafted with code and coffee
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
